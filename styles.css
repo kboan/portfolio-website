@@ -1,0 +1,292 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light mode default */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to right, #f0f4f8, #d9eaf3);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: none; /* Remove any existing background */
+  background-color: #1e1e1e !important; /* Set a solid dark color */
+  color: #d1d1d1; /* Lightened general text color for readability */
+}
+
+body.dark-mode header {
+  background-color: #333;
+  border-bottom: 1px solid #444;
+  color: #d1d1d1;
+}
+
+body.dark-mode .header-right a {
+  color: #a6dcef; /* Lightened link color */
+}
+
+body.dark-mode .header-right a:hover {
+  color: #76c7c0; /* Slightly brighter on hover */
+}
+
+body.dark-mode #darkModeToggle {
+  color: #ffdd57;
+}
+
+body.dark-mode .splash-content h1 {
+  color: #a6dcef; /* Lightened title color */
+}
+
+body.dark-mode .splash-content p {
+  color: #c3c3c3; /* Lightened subtitle and tagline color */
+}
+
+body.dark-mode .splash-content button {
+  background-color: #285e6c; /* Darker background for button */
+  color: #ffffff;
+}
+
+body.dark-mode .splash-content button:hover {
+  background-color: #3a7a8a;
+}
+
+body.dark-mode .project-card {
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h2,
+body.dark-mode .project-card h3 {
+  color: #76c7c0;
+}
+
+body.dark-mode #about,
+body.dark-mode #contact {
+  color: #e4e4e4;
+}
+
+body.dark-mode .back-to-top,
+body.dark-mode .skills span {
+  background-color: #76c7c0;
+  color: #ffffff;
+}
+
+body.dark-mode header button:hover,
+body.dark-mode .back-to-top:hover {
+  background-color: #4caf50;
+}
+
+/* Other Styles */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #005f73;
+}
+
+.header-left span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #005f73;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+  color: #0a9396;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.2);
+}
+
+/* Splash Content */
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.splash-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #005f73;
+  margin-bottom: 10px;
+}
+
+.splash-content p {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.splash-content button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #005f73;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.splash-content button:hover {
+  background-color: #0a9396;
+  transform: scale(1.05);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Projects Section */
+#projects {
+  padding: 60px 0;
+}
+
+/* Project Card */
+.project-card {
+  min-width: 280px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* About Section */
+#about {
+  padding: 80px 0;
+  color: #333;
+  text-align: center;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
+}
+
+#about .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#about .skills span {
+  background-color: #005f73;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 80px 0;
+  color: #333;
+  text-align: center;
+}
+
+#contact a {
+  color: #0a9396;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #005f73;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #0a9396;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #005f73;
+}
